@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.2'
 
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
+
 
 gem 'sass-rails', '~> 4.0.0'
 
@@ -27,3 +30,6 @@ group :develpment do
 end
 
 gem 'newrelic_rpm'
+gem 'rails_12factor', group: :production
+gem 'pg', group: :production
+
